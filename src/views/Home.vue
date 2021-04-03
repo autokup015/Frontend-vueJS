@@ -27,7 +27,8 @@
         <h2 class="mr-15">Total</h2></v-col
       >
       <v-col cols="12" xl="6" lg="6" md="6" sm="12">
-        <h2>15 January, 2021</h2>
+        <h2 v-if="value == ''">15 January, 2021</h2>
+        <h2 v-else>{{ value }}</h2>
       </v-col>
     </v-row>
     <br />
@@ -85,7 +86,7 @@
           sm="12"
           style="background-color:white;text-align:center"
         >
-          <h3>Calender</h3>
+          <h3>Calendar</h3>
           <b-row class="d-flex justify-center">
             <b-col md="auto">
               <b-calendar
