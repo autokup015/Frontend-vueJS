@@ -1,12 +1,31 @@
 <template>
   <v-container>
-    <div class="d-flex">
+    <div>
       <h3>All Bill</h3>
+      <br />
+      <b-row>
+        <b-col md="auto">
+          <b-calendar
+            v-model="value"
+            @context="onContext"
+            locale="en-US"
+          ></b-calendar>
+        </b-col>
+        <!-- <b-col>
+              <p>
+                Value: <b>'{{ value }}'</b>
+              </p>
+              <p class="mb-0">Context:</p>
+              <pre class="small">{{ context }}</pre>
+            </b-col> -->
+      </b-row>
+      <br />
     </div>
     <div class="listbill">
       <div class="d-flex align-center">
-        <h3 class="mr-10">รายการบิลทั้งหมด</h3>
-        <h5>วันที่ : 11111</h5>
+        <h3 class="mr-10 purple--text">รายการบิลทั้งหมด</h3>
+        <h5 v-if="value == ''">วันที่ : --/--/--</h5>
+        <h5 v-else>วันที่ : {{ value }}</h5>
         <v-spacer></v-spacer>
         <h5>ทั้งหมด</h5>
       </div>
@@ -36,6 +55,8 @@
 export default {
   data() {
     return {
+      value: "",
+      context: null,
       search: "",
       headers: [
         {
@@ -48,12 +69,6 @@ export default {
         { text: "Fat (g)", value: "fat" },
         { text: "Carbs (g)", value: "carbs" },
         { text: "Protein (g)", value: "protein" },
-        { text: "Iron (%)", value: "iron" },
-        { text: "Iron (%)", value: "iron" },
-        { text: "Iron (%)", value: "iron" },
-        { text: "Iron (%)", value: "iron" },
-        { text: "Iron (%)", value: "iron" },
-        { text: "Iron (%)", value: "iron" },
         { text: "Iron (%)", value: "iron" },
       ],
       desserts: [
@@ -139,6 +154,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    onContext(ctx) {
+      this.context = ctx;
+    },
   },
 };
 </script>
