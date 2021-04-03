@@ -18,7 +18,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto font-weight-bold">
-          <li class="nav-item active mr-5 ml-5">
+          <li class="nav-item active mr-5 ml-5 d-flex align-center">
             <img class="mr-5 icon" src="../assets/icon-setting.png" />
             <img class="mr-5 icon" src="../assets/icon-alert.png" />
           </li>

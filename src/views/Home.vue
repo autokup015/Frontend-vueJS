@@ -19,7 +19,9 @@
           <img class="mt-5" src="../assets/bill.png" />
           <h2>Add bill</h2>
         </div>
-        <div class="item"></div>
+        <div class="item2 d-flex justify-center align-center">
+          <h1>+</h1>
+        </div>
       </div>
     </div>
     <v-row>
@@ -27,7 +29,7 @@
         <h2 class="mr-15">Total</h2></v-col
       >
       <v-col cols="12" xl="6" lg="6" md="6" sm="12">
-        <h2 v-if="value == ''">15 January, 2021</h2>
+        <h2 v-if="value == ''">-- / -- / --</h2>
         <h2 v-else>{{ value }}</h2>
       </v-col>
     </v-row>
@@ -151,6 +153,26 @@ export default {
   margin-left: 10px;
   text-align: center;
   border-radius: 20px;
+}
+.item2 {
+  background-color: transparent;
+  border: 2px solid #dc667f;
+  height: 250px;
+  width: 250px;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+.item3 {
+  /* background-color: transparent; */
+  /* border: 2px solid #dc667f; */
+  /* height: 250px; */
+  /* width: 250px; */
+  /* margin-left: 10px; */
+  /* text-align: center; */
+  /* border-radius: 20px; */
+  width: 20px;
+  height: 20px;
 }
 .income {
   width: 100%;

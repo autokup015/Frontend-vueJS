@@ -9,7 +9,9 @@
     <br />
     <div>
       <div v-for="(item, index) in data" :key="index">
-        <v-btn color="success" @click="link(item.link)">{{ item.txt }}</v-btn>
+        <a>
+          <h4 @click="link(item.link)">{{ item.txt }}</h4>
+        </a>
       </div>
     </div>
   </div>
@@ -42,7 +44,7 @@ export default {
 .bar {
   background: linear-gradient(to bottom, #ffffff 0%, transparent 100%);
   width: 200px;
-  height: 600px;
+  height: auto;
   text-align: center;
   border-radius: 30px;
 }

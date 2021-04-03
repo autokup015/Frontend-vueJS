@@ -24,7 +24,7 @@
     <div class="listbill">
       <div class="d-flex align-center">
         <h3 class="mr-10 purple--text">รายการบิลทั้งหมด</h3>
-        <h5 v-if="value == ''">วันที่ : --/--/--</h5>
+        <h5 v-if="value == ''">วันที่ : -- / -- / --</h5>
         <h5 v-else>วันที่ : {{ value }}</h5>
         <v-spacer></v-spacer>
         <h5>ทั้งหมด</h5>
