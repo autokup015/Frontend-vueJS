@@ -1,14 +1,14 @@
 <template>
   <v-container>
     <div class="d-flex">
-      <h1>All Bill</h1>
+      <h3>All Bill</h3>
     </div>
     <div class="listbill">
       <div class="d-flex align-center">
-        <h1 class="mr-10">รายการบิลทั้งหมด</h1>
-        <h2>วันที่ : 11111</h2>
+        <h3 class="mr-10">รายการบิลทั้งหมด</h3>
+        <h5>วันที่ : 11111</h5>
         <v-spacer></v-spacer>
-        <h2>ทั้งหมด</h2>
+        <h5>ทั้งหมด</h5>
       </div>
     </div>
     <div class="listitem">
