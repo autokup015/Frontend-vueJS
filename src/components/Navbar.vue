@@ -5,9 +5,6 @@
         <img src="../assets/Group 252.png" />
         <p class="ml-2 font-weight-bold">Management</p>
       </div>
-      <div>
-        <v-text-field name="name" label="label" id="id" solo></v-text-field>
-      </div>
       <button
         class="navbar-toggler"
         type="button"
