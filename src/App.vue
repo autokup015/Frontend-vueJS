@@ -2,7 +2,7 @@
   <v-app>
     <v-main class="bgmain">
       <navbar />
-      <div class="bgmain2 pdTop">
+      <div class="bgmain2 pdTop over">
         <v-container>
           <div class="flex">
             <bar />
@@ -41,17 +41,16 @@ export default {
 }
 .bgmain2 {
   background-image: url("./assets/bg.png");
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-  /* width: 100%;
-  height: auto; */
+  /* overflow: scroll; */
 }
 .pdTop {
   padding-top: 100px;
 }
 .flex {
   display: flex;
+}
+.over {
+  overflow: hidden;
 }
 @media only screen and (max-width: 472px) {
   .flex {
@@ -63,6 +62,11 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .over {
+    overflow: scroll;
   }
 }
 </style>

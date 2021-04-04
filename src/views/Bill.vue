@@ -1,7 +1,10 @@
 <template>
   <v-container>
     <div>
-      <h3>All Bill</h3>
+      <div class="d-flex  align-center">
+        <img class="mr-3" src="../assets/icon-g.png" />
+        <h3 class="purple--text">All Bill</h3>
+      </div>
       <br />
       <b-row>
         <b-col md="auto">
@@ -27,68 +30,26 @@
         <h5 v-if="value == ''">วันที่ : -- / -- / --</h5>
         <h5 v-else>วันที่ : {{ value }}</h5>
         <v-spacer></v-spacer>
-        <h5>ทั้งหมด</h5>
+        <div class="d-flex align-center">
+          <h5>ทั้งหมด</h5>
+          <img class="ml-3" src="../assets/icon-all.png" style="width: 20px;" />
+        </div>
       </div>
     </div>
     <div class="listitem">
-      <div>
-        <b-table :items="items" :fields="fields" striped responsive="sm">
-          <template #cell(show_details)="row">
-            <b-button size="sm" @click="row.toggleDetails" class="mr-2">
-              {{ row.detailsShowing ? "Hide" : "Show" }} Details
-            </b-button>
-          </template>
-
-          <template #row-details="row">
-            <b-card>
-              <b-row class="mb-2">
-                <b-col sm="3" class="text-sm-right"><b>Age:</b></b-col>
-                <b-col>{{ row.item.age }}</b-col>
-              </b-row>
-
-              <b-row class="mb-2">
-                <b-col sm="3" class="text-sm-right"><b>Is Active:</b></b-col>
-                <b-col>{{ row.item.isActive }}</b-col>
-              </b-row>
-            </b-card>
-          </template>
-        </b-table>
-      </div>
+      <Table :date="value" />
     </div>
   </v-container>
 </template>
 
 <script>
+import Table from "../components/table";
 export default {
+  components: { Table },
   data() {
     return {
       value: "",
       context: null,
-      // -----
-      fields: ["first_name", "last_name", "show_details"],
-      items: [
-        {
-          isActive: true,
-          age: 40,
-          first_name: "Dickerson",
-          last_name: "Macdonald",
-        },
-        { isActive: false, age: 21, first_name: "Larsen", last_name: "Shaw" },
-        {
-          isActive: false,
-          age: 89,
-          first_name: "Geneva",
-          last_name: "Wilson",
-          _showDetails: false,
-        },
-        {
-          isActive: false,
-          age: 55,
-          first_name: "at",
-          last_name: "Bo",
-          _showDetails: true,
-        },
-      ],
     };
   },
   methods: {
@@ -99,4 +60,15 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.wrap {
+  flex-wrap: wrap;
+}
+.img {
+  width: 300px;
+  padding: 10px;
+}
+.listitem {
+  border-radius: 20px;
+}
+</style>
