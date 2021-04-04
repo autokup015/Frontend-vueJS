@@ -41,7 +41,6 @@ export default {
 }
 .bgmain2 {
   background-image: url("./assets/bg.png");
-  /* overflow: scroll; */
 }
 .pdTop {
   padding-top: 100px;

@@ -144,10 +144,6 @@ export default {
   flex-wrap: wrap;
   align-items: center;
   padding: 10px;
-  /* overflow: scroll; */
-  /* overflow-x: scroll; */
-  /* overflow-y: hidden;  */
-  /* overflow-x: hidden; */
 }
 .item {
   background-color: #fff;
@@ -167,13 +163,6 @@ export default {
   border-radius: 20px;
 }
 .item3 {
-  /* background-color: transparent; */
-  /* border: 2px solid #dc667f; */
-  /* height: 250px; */
-  /* width: 250px; */
-  /* margin-left: 10px; */
-  /* text-align: center; */
-  /* border-radius: 20px; */
   width: 20px;
   height: 20px;
 }

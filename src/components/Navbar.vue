@@ -19,6 +19,27 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto font-weight-bold">
           <li class="nav-item active mr-5 ml-5 d-flex align-center">
+            <v-card
+              class=" rounded-pill"
+              color="grey lighten-4"
+              width="400"
+              flat
+              tile
+            >
+              <v-toolbar dense>
+                <img src="../assets/icon-search.png" width="20px" />
+
+                <input
+                  class="ml-3"
+                  type="text"
+                  placeholder="Search"
+                  style="width: 100%;"
+                />
+                <v-spacer></v-spacer>
+              </v-toolbar>
+            </v-card>
+          </li>
+          <li class="nav-item active mr-5 ml-5 d-flex align-center">
             <img class="mr-5 icon" src="../assets/icon-setting.png" />
             <img class="mr-5 icon" src="../assets/icon-alert.png" />
           </li>
@@ -29,10 +50,10 @@
           </li>
           <li class="nav-item active mr-5 ml-5">
             <h3>Name</h3>
-            <p>Marketing</p>
-          </li>
-          <li class="nav-item active">
-            <div class="status mt-12"></div>
+            <div class="d-flex">
+              <p>Marketing</p>
+              <div class="status mt-1 ml-3"></div>
+            </div>
           </li>
         </ul>
         <img v-b-toggle.sidebar-right src="../assets/icon.png" class="iconV" />
