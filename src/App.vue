@@ -41,11 +41,11 @@ export default {
 }
 .bgmain2 {
   background-image: url("./assets/bg.png");
-  background-position: center;
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: auto;
+  background-size: cover; */
+  /* width: 100%;
+  height: auto; */
 }
 .pdTop {
   padding-top: 100px;
@@ -56,6 +56,13 @@ export default {
 @media only screen and (max-width: 472px) {
   .flex {
     display: table-row;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .bgmain2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 </style>

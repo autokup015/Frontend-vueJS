@@ -20,7 +20,7 @@
           <h2>Add bill</h2>
         </div>
         <div class="item2 d-flex justify-center align-center">
-          <h1>+</h1>
+          <h1 @click="alert">+</h1>
         </div>
       </div>
     </div>
@@ -123,6 +123,9 @@ export default {
   methods: {
     onContext(ctx) {
       this.context = ctx;
+    },
+    alert() {
+      alert("ดีจ้า :)");
     },
   },
 };

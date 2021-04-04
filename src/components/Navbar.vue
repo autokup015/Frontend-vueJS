@@ -3,7 +3,7 @@
     <v-container>
       <div class="d-flex align-center">
         <img src="../assets/Group 252.png" />
-        <p class="ml-2">Management</p>
+        <p class="ml-2 font-weight-bold">Management</p>
       </div>
       <button
         class="navbar-toggler"
